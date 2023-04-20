@@ -9,6 +9,4 @@ Saya Ayesha Ali Firdaus (NIM 2101990) mengerjakan evaluasi LATIHAN 7 dalam mata 
 - Ketika ikan berhasil memakan lingkaran merah(makanan) maka poin berhasil makan (eat) akan bertambah. `note`: namun fitur ini masih mengalami kendala (error) ketika di jalankan.
 
 # Dokumentasi
-
--
--
+![image](https://user-images.githubusercontent.com/87317233/233337731-15407812-95a0-4c46-8c13-4c99e5244247.png)
