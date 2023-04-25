@@ -20,6 +20,7 @@ public class Controller extends KeyAdapter implements KeyListener
     
     private Game game;
     private Handler handler;
+    private String last;
     
     /**
      * Constructor.
@@ -101,25 +102,21 @@ public class Controller extends KeyAdapter implements KeyListener
             {
                 // Move up.
                 temp.setVelY(-5);
-                game.setScore(+1);
             }
             if((key == KeyEvent.VK_A) || (key == KeyEvent.VK_LEFT))
             {
                 // Move left.
                 temp.setVelX(-5);
-                game.setScore(+1);
             }
             if((key == KeyEvent.VK_S) || (key == KeyEvent.VK_DOWN))
             {
                 // Move down.
                 temp.setVelY(+5);
-                game.setScore(+1);
             }
             if((key == KeyEvent.VK_D) || (key == KeyEvent.VK_RIGHT))
             {
                 // Move right.
                 temp.setVelX(+5);
-                game.setScore(+1);
             }
         }
     }
@@ -160,21 +157,37 @@ public class Controller extends KeyAdapter implements KeyListener
             {
                 // Stop from being moved up.
                 temp.setVelY(0);
+                if(last != "U"){
+                    game.setScore(+1);
+                    last = "U";
+                }
             }
             if((key == KeyEvent.VK_A) || (key == KeyEvent.VK_LEFT))
             {
                 // Stop from being moved left.
                 temp.setVelX(0);
+                if(last != "L"){
+                    game.setScore(+1);
+                    last = "L";
+                }
             }
             if((key == KeyEvent.VK_S) || (key == KeyEvent.VK_DOWN))
             {
                 // Stop from being moved down.
                 temp.setVelY(0);
+                if(last != "D"){
+                    game.setScore(+1);
+                    last = "D";
+                }
             }
             if((key == KeyEvent.VK_D) || (key == KeyEvent.VK_RIGHT))
             {
                 // Stop from being moved right.
                 temp.setVelX(0);
+                if(last != "R"){
+                    game.setScore(+1);
+                    last = "R";
+                }
             }
         }
     }
